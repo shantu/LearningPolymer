@@ -64,8 +64,8 @@ Custom property | Description | Default
 
       .demo {
         display: block;
-        border-bottom: 1px solid #e0e0e0;
-        background-color: white;
+        /*border-bottom: 1px solid #e0e0e0;*/
+        background-color:blue;
         margin: 0;
         padding: 20px;
         @apply --demo-snippet-demo;
@@ -111,12 +111,12 @@ Custom property | Description | Default
       <slot id="content"></slot>
     </div>
 
-    <div class="code-container">
+    <!--<div class="code-container">
       <marked-element markdown="[[_markdown]]" id="marked">
          <div class="code" slot="markdown-html" id="code"></div>
       </marked-element>
       <button id="copyButton" title="copy to clipboard" on-tap="_copyToClipboard">Copy</button>
-    </div>
+    </div>-->
   </template>
 
   <script>
