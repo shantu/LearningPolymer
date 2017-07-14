@@ -1,0 +1,55 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/nuxeo-elements/nuxeo-connection.html">
+<link rel="import" href="../bower_components/nuxeo-elements/nuxeo-document.html">
+<nuxeo-connection id="nxcon" url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
+<link rel="import" href="../bower_components/nuxeo-elements/nuxeo-page-provider.html">
+<link rel="import" href="../bower_components/nuxeo-ui-elements/nuxeo-path-suggestion/nuxeo-path-suggestion.html">
+<dom-module id="doc-reader">
+    <template>
+        <style include="shared-styles">
+             :host {
+                display: block;
+
+                padding: 10px;
+            }
+        </style>
+
+        <div class="card">
+            <div class="circle">5</div>
+            <h1>Doc Reader</h1>
+        <nuxeo-page-provider auto provider="advanced_document_content" params="[[_computeParams(document)]]" current-page="{{children}}">
+        </nuxeo-page-provider>
+        <nuxeo-document id="doc" auto doc-path="[[targetPath]]" response={{document}}></nuxeo-document>
+        <h2>Title: [[document.title]]</h2>
+        <p>ID: [[document.uid]]</p>
+        <p>Repository: [[document.repository]]</p>
+        <p>State: [[document.state]]</p>
+        <h3>Contributors:</h3>
+        <ul>
+            <template is="dom-repeat" items="[[document.properties.dc:contributors]]" as="contributor">
+                <ul>[[contributor]]</ul>
+                </template>
+                <ul>System</ul>
+        </ul>
+        <h3>Children:</h3>
+<ul>
+  <template is="dom-repeat" items="[[children]]" as="child">
+    <ul>[[child.title]]</ul>
+    
+  </template>
+  <ul>Template</ul>
+  <ul>Workspace</ul>
+  <ul>Sections</ul>
+</ul>
+   </div>
+        
+    </template>
+
+    <script>
+        Polymer({
+            is: 'doc-reader',
+        });
+
+    </script>
+</dom-module>
