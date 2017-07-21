@@ -1,0 +1,7 @@
+{
+  "name": "girl",
+  "short_name": "girl",
+  "description": "this is my 2nd polymer project.",
+  "start_url": "/",
+  "display": "standalone"
+}

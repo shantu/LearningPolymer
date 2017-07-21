@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="student-database">
+  <template>
+    <style>
+      :host {
+        display: block;
+        color: red;
+      }
+    </style>
+    <h1>[[prop1]]!</h1>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class StudentDatabase extends Polymer.Element {
+      static get is() { return 'student-database'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'Student-database is a school management system.This system may be helpful for many people'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(StudentDatabase.is, StudentDatabase);
+  </script>
+</dom-module>
