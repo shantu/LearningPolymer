@@ -1,0 +1,6 @@
+{
+  "name": "helloworld",
+  "short_name": "helloworld",
+  "start_url": "/",
+  "display": "standalone"
+}
