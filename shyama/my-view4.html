@@ -1,0 +1,40 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view4">
+    <template>
+      <style include="shared-styles">
+        :host {
+          display: block;
+  
+          padding: 10px;
+        }
+      </style>
+  
+      <div class="card">
+        <div class="circle">4</div>
+        <h1>View Four</h1>
+        <p>Technicise Software and Solution private limited.</p>
+        <p>Hi,I am Shyamapriya,This is my first work on polymer sample project app, I installed polymer after two days hard work.After install virtual mechine with help of Soumen paul,trying to build my first demo view.Letus check it out it is working or not.</p>
+      </div>
+    </template>
+  
+    <script>
+      class MyView4 extends Polymer.Element {
+        static get is() { return 'my-view4'; }
+      }
+  
+      window.customElements.define(MyView4.is, MyView4);
+    </script>
+  </dom-module>
+  
