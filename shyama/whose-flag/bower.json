@@ -1,0 +1,21 @@
+{
+  "name": "shyama-app",
+  "description": "Match flags to their countries!",
+  "main": "shyama-app.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "app-layout": "^2.0.4",
+    "iron-image": "^2.1.2",
+    "paper-button": "^2.0.0",
+    "paper-styles": "^2.0.0",
+    "iron-ajax": "^2.0.8"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  }
+}
