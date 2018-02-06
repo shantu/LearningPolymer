@@ -1,0 +1,27 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<dom-module id="my-view3">
+    
+      <template>
+        <!-- scoped CSS for this element -->
+        <style>
+          div {
+            display: inline-block;
+            background-color: rgba(107, 103, 103, 0.719);
+            border-radius: 8px;
+            padding: 4px;
+          }
+        </style>
+        <div>
+          <!-- any children are rendered here -->
+          <slot></slot>
+        </div>
+      </template>
+    
+      <script>
+        class MyView3 extends Polymer.Element {
+          static get is() { return "my-view3"; }
+        }
+        customElements.define(MyView3.is, MyView3);
+      </script>
+    
+    </dom-module>

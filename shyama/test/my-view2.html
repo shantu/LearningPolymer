@@ -1,0 +1,16 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<dom-module id="my-view2">
+
+  <template>
+    <p>I'm a Shyamapriya Das. This is my shadow DOM!</p>
+  </template>
+
+  <script>
+    class MyView2 extends Polymer.Element {
+      static get is() { return "my-view2"; }
+    }
+    customElements.define(MyView2.is, MyView2);
+  </script>
+
+</dom-module>

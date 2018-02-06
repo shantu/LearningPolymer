@@ -1,0 +1,21 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<dom-module id="my-view4">
+    <template>
+      <!-- bind to the "owner" property -->
+      <div>This is <b>{{owner}}</b>'s Picture.</div>
+    </template>
+    
+    <script>
+      class MyView4 extends Polymer.Element {
+        static get is() { return "my-view4"; }
+        
+        // set this element's owner property
+        constructor() {
+          super();
+          this.owner = "Ritadi";
+        }
+      }
+      
+      customElements.define(MyView4.is, MyView4);
+    </script>
+  </dom-module>
